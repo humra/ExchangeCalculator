@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+//Selektori za dodatni element iz zadatka u komentaru na kraju
+
 public class Raiffeisen {
 
     private WebDriver driver;
@@ -95,3 +97,30 @@ public class Raiffeisen {
         }
     }
 }
+
+/*
+Selektori za zadani HTML element iz zadatka
+
+1 - ID
+driver.findElement(By.id("transactions-totals-title"));
+S obzirom da se radi o elementu sa ID-em rekao bi da je ovo najbolja opcija
+Nema dodatnih komplikacija
+
+2 - CSS selektor
+driver.findElement(By.cssSelector("#transactions-totals-title"));
+Opcija ako element ima ID
+
+driver.findElement(By.cssSelector("div[class='m-auto font-bold text-2x']"));
+Druga, manje sretna opcija ako nema ID, iako postoji mogućnost da ćemo naći više od jednog elementa
+U tom slučaju možda ići na first/last ako su samo 2. Ako ih je više nebi išao sa CSS selektorom.
+
+3 - XPath
+driver.findElement(By.xpath("//div[@id='transactions-totals-title'"));
+Opcija ako element ima ID
+
+driver.findElement(By.xpath("//div[text()='Total sum of displayed 42 transactions']"));
+Opcija ako znam koji će točno biti tekst elementa
+
+driver.findElement(By.xpath("//div[contains(text(), 'Total sum of displayed ')]"));
+Opcija ako tražim po tekstu, da ne znam koji će biti broj transakcija
+ */
