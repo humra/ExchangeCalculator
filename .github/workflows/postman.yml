@@ -23,8 +23,8 @@ jobs:
 
       - name: Run Postman Collection
         run: |
-          newman run Raiffeisen.postman_collection.json \
-            --reporters cli,junit \
+          newman run Raiffeisen.postman_collection.json `
+            --reporters cli,junit `
             --reporter-junit-export newman-results.xml
 
       - name: Upload test results
