@@ -19,18 +19,9 @@ jobs:
           java-version: "17"
           distribution: "temurin"
 
-      - name: Install Chrome browser
-        uses: browser-actions/setup-chrome@v1
-
-      - name: Install ChromeDriver
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium-chromedriver
-
       - name: Verify Chrome installation
         run: |
-          google-chrome --version || true
-          chromedriver --version || true
+          "C:\Program Files\Google\Chrome\Application\chrome.exe" --version
 
       - name: Run Maven Tests
         run: mvn -B clean test
