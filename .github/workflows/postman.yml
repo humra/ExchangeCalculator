@@ -16,7 +16,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "24.11.1"
 
       - name: Install newman
         run: npm install -g newman
@@ -31,4 +31,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: newman-results
-          path: "**/newman-results.xml"
+          path: newman-results.xml
