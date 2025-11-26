@@ -21,9 +21,9 @@ jobs:
       - name: Install newman
         run: npm install -g newman
 
-      - name: Run Postman Collection
-        run: |
-          newman run postman/Raiffeisen.postman_collection.json --reporters cli,junit --reporter-junit-export newman-results.xml
+      - name: Run Postman
+        run: newman run postman/Raiffeisen.postman_collection.json --reporters cli,junit --reporter-junit-export newman-results.xml
+
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
