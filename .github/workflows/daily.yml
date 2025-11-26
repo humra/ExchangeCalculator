@@ -20,7 +20,7 @@ jobs:
           distribution: "temurin"
 
       - name: Verify Chrome installation
-        run: & "C:\Program Files\Google\Chrome\Application\chrome.exe" --version
+        run: "& \"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --version"
 
       - name: Run Maven Tests
         run: mvn -B clean test
