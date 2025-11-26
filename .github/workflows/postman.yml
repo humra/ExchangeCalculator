@@ -30,3 +30,6 @@ jobs:
         with:
           name: newman-results
           path: newman-results.xml
+
+      - name: List files
+        run: dir
