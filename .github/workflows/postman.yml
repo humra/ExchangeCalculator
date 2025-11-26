@@ -23,9 +23,7 @@ jobs:
 
       - name: Run Postman Collection
         run: |
-          newman run postman/Raiffeisen.postman_collection.json `
-            --reporters cli,junit `
-            --reporter-junit-export newman-results.xml
+          newman run postman/Raiffeisen.postman_collection.json --reporters cli,junit --reporter-junit-export newman-results.xml
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
