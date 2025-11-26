@@ -1,4 +1,4 @@
-name: "Daily test run"
+name: Daily
 
 on:
   schedule:
